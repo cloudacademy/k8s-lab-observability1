@@ -1,2 +1,2 @@
-# k8s-lab-observability1
-k8s-lab-observability1
+# k8s-lab-observability
+k8s-lab-observability
