@@ -170,13 +170,6 @@ alertmanager:
   ##
   affinity: {}
 
-  ## PodDisruptionBudget settings
-  ## ref: https://kubernetes.io/docs/concepts/workloads/pods/disruptions/
-  ##
-  podDisruptionBudget:
-    enabled: false
-    maxUnavailable: 1
-
   ## Use an alternate scheduler, e.g. "stork".
   ## ref: https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
   ##
@@ -334,7 +327,6 @@ alertmanager:
     runAsUser: 65534
     runAsNonRoot: true
     runAsGroup: 65534
-    fsGroup: 65534
 
   service:
     annotations: {}
@@ -549,13 +541,6 @@ nodeExporter:
   pod:
     labels: {}
 
-  ## PodDisruptionBudget settings
-  ## ref: https://kubernetes.io/docs/concepts/workloads/pods/disruptions/
-  ##
-  podDisruptionBudget:
-    enabled: false
-    maxUnavailable: 1
-
   ## node-exporter resource limits & requests
   ## Ref: https://kubernetes.io/docs/user-guide/compute-resources/
   ##
@@ -582,7 +567,6 @@ nodeExporter:
   ## Security context to be added to node-exporter pods
   ##
   securityContext:
-    fsGroup: 65534
     runAsGroup: 65534
     runAsNonRoot: true
     runAsUser: 65534
@@ -853,13 +837,6 @@ server:
   ##
   affinity: {}
 
-  ## PodDisruptionBudget settings
-  ## ref: https://kubernetes.io/docs/concepts/workloads/pods/disruptions/
-  ##
-  podDisruptionBudget:
-    enabled: false
-    maxUnavailable: 1
-
   ## Use an alternate scheduler, e.g. "stork".
   ## ref: https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
   ##
@@ -1054,7 +1031,6 @@ server:
     runAsUser: 65534
     runAsNonRoot: true
     runAsGroup: 65534
-    fsGroup: 65534
 
   service:
     annotations: {}
@@ -1210,13 +1186,6 @@ pushgateway:
   ## Annotations to be added to deployment
   ##
   deploymentAnnotations: {}
-
-  ## PodDisruptionBudget settings
-  ## ref: https://kubernetes.io/docs/concepts/workloads/pods/disruptions/
-  ##
-  podDisruptionBudget:
-    enabled: false
-    maxUnavailable: 1
 
   ## pushgateway resource requests and limits
   ## Ref: http://kubernetes.io/docs/user-guide/compute-resources/
